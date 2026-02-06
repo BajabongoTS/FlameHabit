@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,43 +10,39 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  final TextEditingController myController = TextEditingController();
-
-  String userName = '';
-
-  void greetUser() {
-    String name = myController.text;
-    setState(() {
-      userName = "Hello, $name";
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Page"),
-      ),
+      backgroundColor: Color.fromARGB(255, 24, 24, 26),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0), 
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-            Text(userName),
-            TextField(
-              controller: myController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Enter your name',
+              Lottie.asset(
+                'assets/flame.json',
+                width: 200,
+                height: 200,
+                repeat: true,
               ),
-            ),
-            ElevatedButton(
-              onPressed: greetUser, 
-              child: Text("Submit"))
-          ],
-        ))
-      ),
+              SizedBox(height: 40),
+              Text(
+                'FlameHabit',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Light your daily habits, ignite your life',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: const Color.fromARGB(255, 206, 206, 206),
+                ),
+              ),
+            ],
+          ),
+        ),
     );
   }
 }

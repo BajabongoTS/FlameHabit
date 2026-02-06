@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+class StreakPage extends StatelessWidget {
+  const StreakPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class SettingsPage extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 24, 24, 26),
       body: Center(
         child: Text(
-          'Settings Page',
+          'Streak Page',
           style: TextStyle(
             color: Colors.white,
           ),
