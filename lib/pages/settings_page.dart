@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flamehabit/components/my_drawer.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -6,13 +7,17 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 24, 24, 26),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      drawer: const MyDrawer(),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Text(
           'Settings Page',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
         ),
       ),
     );
