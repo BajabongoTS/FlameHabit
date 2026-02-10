@@ -28,6 +28,7 @@ class MyDrawer extends StatelessWidget {
                 context,
                 listen: false,
               ).toggleTheme(),
+              activeColor: Colors.orange,
             ),
           ],
         ),
