@@ -1,5 +1,6 @@
 import 'package:flamehabit/components/my_drawer.dart';
 import 'package:flamehabit/components/my_habit_tile.dart';
+import 'package:flamehabit/components/my_heat_map.dart';
 import 'package:flamehabit/database/habit_database.dart';
 import 'package:flamehabit/models/habit.dart';
 import 'package:flamehabit/util/habit_util.dart';
@@ -200,7 +201,32 @@ class _PageState extends State<Page> {
         backgroundColor: Theme.of(context).colorScheme.tertiary,
         child: Icon(Icons.add, color: Theme.of(context).colorScheme.inversePrimary),
       ),
-      body: _buildHabitList(),
+      body: ListView(
+        children: [
+          _buildHeatMap(),
+          _buildHabitList(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHeatMap() {
+    final habitDatabase = context.watch<HabitDatabase>();
+    List<Habit> currentHabits = habitDatabase.currentHabits;
+
+    return FutureBuilder<DateTime?>(
+      future: habitDatabase.getFirstLaunchDate(), 
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return MyHeatMap(
+            startDate: snapshot.data!,
+            dataset: prepareHeatMapDataset(currentHabits),
+          );
+        }
+        else {
+          return Container();
+        }
+      },
     );
   }
 
@@ -211,6 +237,8 @@ class _PageState extends State<Page> {
 
     return ListView.builder(
       itemCount: currentHabits.length,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         final habit = currentHabits[index];
         bool isCompletedToday = isHabitCompletedToday(habit.completedDays);
