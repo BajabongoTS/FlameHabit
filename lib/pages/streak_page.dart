@@ -3,6 +3,7 @@ import 'package:flamehabit/database/habit_database.dart';
 import 'package:flamehabit/models/habit.dart';
 import 'package:flamehabit/util/habit_util.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class StreakPage extends StatefulWidget {
@@ -164,9 +165,11 @@ class _StreakPageState extends State<StreakPage> {
                                 : Theme.of(context).colorScheme.inversePrimary,
                           )
                         else if (isAllCompleted)
-                          const Icon(
-                            Icons.local_fire_department,
-                            color: Colors.orange,
+                          Lottie.asset(
+                            'assets/flame.json',
+                            repeat: true,
+                            width: 50,
+                            height: 50,
                           )
                         else
                           const Icon(
