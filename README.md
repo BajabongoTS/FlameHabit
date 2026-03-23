@@ -1,16 +1,92 @@
-# flamehabit
+# 🔥 FlameHabit
 
-A new Flutter project.
+**FlameHabit** to aplikacja do budowania i utrzymywania codziennych nawyków. Pomaga Ci zachować konsekwencję, śledzić postępy i budować motywację dzięki systemowi streaków.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Funkcje
 
-A few resources to get you started if this is your first Flutter project:
+* ✅ Tworzenie własnych nawyków
+* 📅 Codzienne śledzenie postępów
+* 🔥 System **streaków** – utrzymuj ciągłość dni
+* 📊 Prosty i czytelny interfejs
+* ⏰ Przypomnienia o nawykach *(opcjonalnie)*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🔥 Jak działa streak?
+
+Streak to liczba dni z rzędu, w których wykonałeś **wszystkie swoje nawyki**.
+
+* Jeśli wykonasz wszystkie nawyki danego dnia → streak rośnie 🔥
+* Jeśli pominiesz choć jeden → streak zostaje przerwany 💔
+
+To prosty, ale bardzo motywujący mechanizm!
+
+---
+
+## 🚀 Dlaczego FlameHabit?
+
+Budowanie nawyków jest trudne — FlameHabit pomaga Ci:
+
+* utrzymać konsekwencję
+* zwiększyć motywację
+* wizualizować postęp
+* nie przerywać dobrej passy
+
+---
+
+## 🛠️ Instalacja
+
+```bash
+git clone https://github.com/twoj-login/flamehabit.git
+cd flamehabit
+npm install
+npm start
+```
+
+---
+
+## 📱 Użytkowanie
+
+1. Dodaj swoje nawyki
+2. Codziennie oznacz wykonane zadania
+3. Utrzymuj streak 🔥
+4. Obserwuj swoje postępy
+
+---
+
+## 📌 Przykładowe nawyki
+
+* 🏃‍♂️ Ćwiczenia
+* 📖 Czytanie
+* 💧 Picie wody
+* 🧘‍♀️ Medytacja
+
+---
+
+## 🔮 Plany rozwoju
+
+* 📈 Statystyki i wykresy
+* 🌙 Tryb ciemny
+* 👥 Synchronizacja między urządzeniami
+* 🏆 System osiągnięć
+
+---
+
+## 🤝 Wkład
+
+Masz pomysł na ulepszenie?
+Zrób fork repozytorium i wyślij pull request!
+
+---
+
+## 📄 Licencja
+
+MIT License
+
+---
+
+## 🔥 Motto
+
+> *"Nie przerywaj ognia – buduj swoje nawyki każdego dnia."*
